@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&family=Fjalla+One&family=Lato:ital,wght@1,900&family=Poppins:wght@900&family=Shadows+Into+Light&family=Ubuntu:ital,wght@0,500;1,300;1,400;1,500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: #bd4291;
+}
+
+body {
+  width: 100vw;
+  /* height: 100vh; */
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffd5d5;
+  overflow-x: hidden;
+}
+.heading {
+  background-image: url("https://images.unsplash.com/photo-1637567068269-df5225247a79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  width: 100%;
+  height: 35%;
+  border-radius: 20px 20px 0px 0px;
+  position: relative;
+}
+
+.heading p {
+  position: relative;
+  left: 25%;
+  top: 50%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2vmax;
+  color: whitesmoke;
+}
+
+.heading span {
+  color: white;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 2vmax;
+}
+
+.container {
+  width: 480px;
+  height: 110vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 5px 1px rgb(190, 190, 190);
+  border-radius: 20px;
+  position: relative;
+  background-color: whitesmoke;
+}
+
+.addList {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(134, 134, 134, 0.466);
+  padding: 3px;
+  box-shadow: 0px 1px 7px 0px #c9c9c9;
+}
+
+.addList form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 7px 0;
+}
+
+#toDoName {
+  width: 100%;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  background: 0;
+  color: #bb1237;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+#toDoName::placeholder {
+  color: #bb1237;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  opacity: 70%;
+}
+
+#toDoName:focus::placeholder {
+  opacity: 50%;
+}
+
+.addList button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5vmax;
+  font-weight: 800;
+  font-family: "Fjalla One", sans-serif;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  margin-left: 5px;
+  background: #3ec70b;
+  border-radius: 50%;
+}
+
+.listItem {
+  list-style-type: none;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.toDoItem i {
+  cursor: pointer;
+}
+.toDoItem {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin: 3vmin 0;
+  transition: text-decoration 0.5s linear;
+  color: #0a3946;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.fa-trash-can {
+  position: absolute;
+  right: 10px;
+}
+
+.toDoTitle {
+  margin: 5px 20px;
+  max-width: 75%;
+  word-break: break-all;
+  white-space: normal;
+  font-size: 1.5vmax;
+  outline: none;
+  border: none;
+}
+
+.fa-pen-to-square {
+  color: #3ec70b;
+  position: absolute;
+  right: 40px;
+}
+.fa-check {
+  color: white;
+  background-color: #3ec70b;
+  padding: 2px;
+  border-radius: 10px;
+  position: absolute;
+  right: 40px;
+}
+
+.checkbox {
+  min-width: 25px;
+  min-height: 25px;
+  position: relative;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #bd4291;
+  padding: 0;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.fa-check-double {
+  font-size: 1rem;
+}
+
+.line {
+  width: 75%;
+  height: 2px;
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0);
+  transition: all 0.2s linear;
+}
+
+/* CSS */
+#clearBtn {
+  appearance: button;
+  background-color: #fd4949;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+#clearBtn:main,
+#clearBtn:focus {
+  user-select: auto;
+}
+
+#clearBtn:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+#clearBtn:disabled {
+  cursor: auto;
+}
+#clearBtn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+@media screen and (max-width: 700px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 7vmax;
+  }
+  .heading {
+    height: 30%;
+    border-radius: 0;
+  }
+  .heading p {
+    font-size: 6vmin;
+    left: 31%;
+    top: 50%;
+  }
+  .heading span {
+    font-size: 12vmin;
+    top: 30%;
+    right: 25%;
+  }
+  .container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    border-radius: 0;
+  }
+
+  .addList button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vmax;
+    border-radius: 50%;
+    margin-left: 5px;
+    font-weight: 500;
+  }
+  .toDoTitle {
+    font-size: 2.3vmax;
+  }
+}
